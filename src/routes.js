@@ -16,6 +16,16 @@ var routes = (
       handler={require('./components/authors/authorPage')}
     />
     <Redirect from="awthurs" to="authors" />
+    <Route
+      name="addAuthor"
+      path="author"
+      handler={require('./components/authors/manageAuthorPage')}
+    />
+    <Route
+      name="manageAuthor"
+      path="author/:id"
+      handler={require('./components/authors/manageAuthorPage')}
+    />
     <Route name="about" handler={require('./components/about/aboutPage')} />
     <Redirect from="about-us" to="about" />
     <Redirect from="about/*" to="about" />
